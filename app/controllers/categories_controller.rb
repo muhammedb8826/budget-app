@@ -64,11 +64,12 @@ class CategoriesController < ApplicationController
   end
 
   private
-    def set_category
-      @category = Category.find(params[:id])
-    end
 
-    def set_categories
-        @categories = Category.all
-    end
+  def set_category
+    @category = Category.find(params[:id])
+  end
+
+  def set_categories
+    @categories = Category.all
+  end
 end
