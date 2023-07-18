@@ -19,11 +19,7 @@ RSpec.describe Category, type: :model do
   end
 
   it 'has many deals' do
-    expect(Category.reflect_on_association(:deals).macro).to eq(:has_many)
-  end
-
-  it 'has many categorizations' do
-    expect(Category.reflect_on_association(:categorizations).macro).to eq(:has_many)
+    expect(Category.reflect_on_association(:deals).macro).to eq(:has_and_belongs_to_many)
   end
 
   it 'belongs to a user' do

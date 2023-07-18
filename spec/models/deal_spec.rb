@@ -22,11 +22,7 @@ RSpec.describe Deal, type: :model do
     expect(Deal.reflect_on_association(:author).macro).to eq(:belongs_to)
   end
 
-  it 'has many categorizations' do
-    expect(Deal.reflect_on_association(:categorizations).macro).to eq(:has_many)
-  end
-
   it 'has many categories' do
-    expect(Deal.reflect_on_association(:categories).macro).to eq(:has_many)
+    expect(Deal.reflect_on_association(:categories).macro).to eq(:has_and_belongs_to_many)
   end
 end
