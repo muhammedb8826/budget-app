@@ -37,10 +37,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_18_182856) do
   create_table "deals", force: :cascade do |t|
     t.string "name"
     t.decimal "amount"
-    t.bigint "user_id", null: false
+    t.bigint "author_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_deals_on_user_id"
+    t.index ["author_id"], name: "index_deals_on_author_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -53,5 +53,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_18_182856) do
   add_foreign_key "categorizations", "categories"
   add_foreign_key "categorizations", "deals"
   add_foreign_key "categorizations", "users"
-  add_foreign_key "deals", "users"
+  add_foreign_key "deals", "users", column: "author_id"
 end
