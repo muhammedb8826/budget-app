@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: one
+  deal: one
+  user: one
+
+two:
+  category: two
+  deal: two
+  user: two
