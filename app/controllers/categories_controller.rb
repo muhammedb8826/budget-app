@@ -4,6 +4,7 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
+    @user = current_user   
     @categories = Category.all
   end
 
@@ -16,6 +17,7 @@ class CategoriesController < ApplicationController
   # GET /categories/new
   def new
     @category = Category.new
+    @deal_all = Deal.all
   end
 
   # GET /categories/1/edit
@@ -73,5 +75,9 @@ class CategoriesController < ApplicationController
 
   def set_categories
     @categories = Category.all
+  end
+
+  def category_params
+    params.require(:category).permit(:name, :icon, :deal_id)
   end
 end
