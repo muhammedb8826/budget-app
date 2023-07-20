@@ -2,15 +2,14 @@
 
 <h1>Hey <%= @user.name %> This is categoris page</h1>
 
+<h2>Total amount: <%= @user.categories.includes(:deals).map { |category| category.deals.sum(:amount) }.sum %></h2>
+
 <% @categories.each do |category| %>
   <img src="<%= category.icon %>" alt="image" width="100" height="100">
   <p>
     <%= link_to category.name, category_path(category) %>
   </p>
+  <p> <%= category.deals.sum(:amount) %> </p>
 <% end %>
 
 <%= link_to 'Add a new category', new_category_path %>
-
-<%# <p> %>
-  <!--%= link_to @category.name, category_deals_path(category) %>
-</p>-->

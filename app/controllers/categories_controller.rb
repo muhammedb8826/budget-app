@@ -5,13 +5,14 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     @user = current_user   
-    @categories = Category.all
+    @categories = Category.includes(:deals).where(user_id: @user.id)
   end
 
   # GET /categories/1
   # GET /categories/1.json
   def show
     @category = Category.find(params[:id])
+    @deals = @category.deals
   end
 
   # GET /categories/new
