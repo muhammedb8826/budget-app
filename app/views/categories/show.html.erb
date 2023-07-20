@@ -1,0 +1,10 @@
+<h1><%= @category.name %></h1>
+<%= link_to 'back', categories_path %>
+<% @category.deals.each do |deal| %>
+  <p>
+    <%= deal.name %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Add a new transaction',  new_category_deal_path(category_id: @category.id) %>
