@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root "categories#index"
+  root "splash_screen#index"
   resources :categories do
     resources :deals, only: [:new, :create]
   end

@@ -3,6 +3,7 @@
 <h1>Hey <%= @user.name %> This is categoris page</h1>
 
 <% @categories.each do |category| %>
+  <img src="<%= category.icon %>" alt="image" width="100" height="100">
   <p>
     <%= link_to category.name, category_path(category) %>
   </p>

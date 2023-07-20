@@ -2,7 +2,7 @@
 <%= link_to 'back', categories_path %>
 <% @category.deals.each do |deal| %>
   <p>
-    <%= deal.name %>
+    <%= deal.name %>, <%= deal.amount %>
   </p>
 <% end %>
 
