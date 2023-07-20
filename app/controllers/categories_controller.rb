@@ -77,7 +77,8 @@ class CategoriesController < ApplicationController
     @categories = Category.all
   end
 
+
   def category_params
-    params.require(:category).permit(:name, :icon, :deal_id)
+    params.require(:category).permit(:name, :icon, :user_id)
   end
 end

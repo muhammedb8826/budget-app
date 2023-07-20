@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user) { User.new(name: 'John Doe') }
+  let(:user) { User.new(name: 'John Doe', email: 'johny123@gmail.com', password: '123456') }
 
   it 'is valid with valid attributes' do
     expect(user).to be_valid
