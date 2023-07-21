@@ -1,11 +1,10 @@
 <h1><%= @category.name %></h1>
 <h2> Total amount: <%= @category.deals.sum(:amount) %> </h2>
 <%= link_to 'back', categories_path %>
-<% @category.deals.each do |deal| %>
-  <p>
-    <%= deal.name %>, <%= deal.amount %>
-  </p>
+<% @category.recent_deals.each do |deal| %>
+  <p> <%= deal.amount %> </p>
+  <p> <%= deal.name %> </p>
+  <%= deal.created_at.strftime("%d %B %Y") %>
 <% end %>
-
 
 <%= link_to 'Add a new transaction',  new_category_deal_path(category_id: @category.id) %>

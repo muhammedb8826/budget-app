@@ -4,4 +4,8 @@ class Category < ApplicationRecord
 
   validates :name, presence: true
   validates :icon, presence: true
+
+  def recent_deals
+    deals.order(created_at: :desc)
+  end
 end
