@@ -1,16 +1,16 @@
 .go-back {
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    left: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .go-back a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: 1.2em;
-    font-weight: 600;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.2em;
+  font-weight: 600;
 }
