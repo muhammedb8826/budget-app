@@ -3,10 +3,12 @@ class DealsController < ApplicationController
   def index
     @deals = Deal.all
   end
+
   def new
     @deal = Deal.new
     @category = Category.find(params[:category_id])
   end
+
   def create
     @category = Category.find(params[:category_id])
     @deal = Deal.new(deal_params)
@@ -18,6 +20,7 @@ class DealsController < ApplicationController
   end
 
   private
+
   def deal_params
     params.require(:deal).permit(:name, :amount, :author_id, category_ids: [])
   end

@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
-    @user = current_user   
+    @user = current_user
     @categories = Category.includes(:deals).where(user_id: @user.id)
   end
 
@@ -77,7 +77,6 @@ class CategoriesController < ApplicationController
   def set_categories
     @categories = Category.all
   end
-
 
   def category_params
     params.require(:category).permit(:name, :icon, :user_id)
