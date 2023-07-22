@@ -87,7 +87,7 @@ In order to run this project you need to:
 - Install [Node](https://nodejs.org/en/)
 - Install a code editor, I suggest [VsCode](https://code.visualstudio.com/)
 - Install Ruby
-- Install rails by using commands below 
+- Install rails by using the commands below 
 ```bash
 gem install rails
 ```
@@ -159,8 +159,9 @@ If you like this project leave a start for it.
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
+A design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
 
-I'd like to thank Microverse for helping us in the journey to become a Fullstack developer.
+I'd like to thank Microverse for helping us in the journey to becoming a Fullstack developer.
 
 <p align="right"><a href="#readme-top">👆</a></p>
 
