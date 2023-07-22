@@ -1,3 +1,4 @@
+<div class="forms">
 <%= form_with(model: category) do |form| %>
   <% if category.errors.any? %>
     <div style="color: red">
@@ -11,19 +12,20 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="inputs">
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
 
-  <div>
+  <div class="inputs">
     <%= form.label :icon, style: "display: block" %>
     <%= form.text_field :icon %>
   </div>
     
   <%= form.hidden_field :user_id, value: current_user.id %>
   
-  <div>
+  <div class="save">
     <%= form.submit %>
   </div>
 <% end %>
+</div>

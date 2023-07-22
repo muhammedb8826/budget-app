@@ -12,6 +12,7 @@
 
   <body>
      <div class="app-container">
+       <span class="log-out"><%= link_to 'Logout', destroy_user_session_path, 'data-turbo-method': :delete, class: "logout" %></span>
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
        <%= yield %>
