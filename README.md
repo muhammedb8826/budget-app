@@ -75,6 +75,14 @@ In this project, I'm building a blog app with rails that will help users create 
 
 <!-- Getting Started -->
 
+## 🚀 Live Demo
+
+[Click here to see the page](https://budget-app-xoqr.onrender.com/)
+
+## video walkthrough
+
+[video]()
+
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To run the project locally, follow these steps.
