@@ -12,7 +12,6 @@ RSpec.describe 'Categories', type: :system do
     visit categories_path
   end
 
-
   it 'shows all categories' do
     expect(page).to have_content 'Food'
     expect(page).to have_content 'Travel'
