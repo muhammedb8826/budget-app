@@ -84,6 +84,5 @@ test:
 #
 production:
   <<: *default
-  database: budget_app_production
 
 
