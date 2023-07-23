@@ -10,7 +10,7 @@ RSpec.describe 'Categories', type: :system do
     visit categories_path
   end
 
-  it 'shows the categories index page' do
-    expect(page).to have_content('Categories')
-  end
+    it 'shows the category name' do
+      expect(page).to have_content('Test Category')
+    end
 end
