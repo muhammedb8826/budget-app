@@ -81,7 +81,7 @@ In this project, I'm building a blog app with rails that will help users create 
 
 ## video walkthrough
 
-[video]()
+[video](https://www.loom.com/share/12d831a8850842aba25bef967bdfc148)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
