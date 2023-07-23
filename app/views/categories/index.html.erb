@@ -12,7 +12,7 @@
           <p><%= category.name %></p>
           <sub> <%= category.created_at.strftime("%d %B %Y") %> </sub>
         </div>
-        <p class="amount"> <%= category.deals.sum(:amount) %> </p>
+        <p class="amount"> <%= number_to_currency(category.deals.sum(:amount)) %> </p>
       </li>
     <% end %>
   <% end %>
