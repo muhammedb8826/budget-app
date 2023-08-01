@@ -1,0 +1,9 @@
+<h1 class="new-form">New transaction</h1>
+
+<%= render "form", deal: @deal %>
+
+<br>
+
+<div class="back">
+  <%= link_to "←", category_path(id: @category.id) %>
+</div>

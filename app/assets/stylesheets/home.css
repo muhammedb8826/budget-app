@@ -1,0 +1,83 @@
+.categories {
+  height: 80%;
+  overflow-y: scroll;
+}
+
+.categories h2 {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  text-align: center;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 0.5em;
+  position: relative;
+}
+
+.categories h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  color: #b9bec4;
+}
+
+h3 .total-sum {
+  color: var(--main-color-dark);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul a {
+  text-decoration: none;
+  color: var(--main-color-dark);
+}
+
+ul li {
+  position: relative;
+  display: flex;
+  padding: 0.5em 1em;
+}
+
+ul li img {
+  width: 75px;
+  height: 75px;
+}
+
+ul li .category-name {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #b9bec4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 1em;
+}
+
+ul li .amount {
+  position: absolute;
+  right: 1em;
+}
+
+.create-category-link {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: var(--main-color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+}
+
+.create-category-link a {
+  color: var(--text-color);
+  text-decoration: none;
+  border: 1px solid var(--text-color);
+  width: 80%;
+  display: block;
+  text-align: center;
+  padding: 0.5em 0;
+}

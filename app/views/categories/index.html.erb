@@ -1,0 +1,23 @@
+<div class="categories">
+<span class="log-out"><%= link_to 'Logout', destroy_user_session_path, 'data-turbo-method': :delete, class: "logout" %></span>
+  <h2>CATEGORIES</h2>
+
+  <!--h3><span>Total amount:</span> <span class="total-sum"> <!%= @user.categories.includes(:deals).map { |category| category.deals.sum(:amount) }.sum %></span></h3-->
+  <ul class="categories-list">
+  <% @categories.each do |category| %>
+    <%= link_to category_path(category) do %>
+      <li>
+        <img src="<%= category.icon %>" alt="image">
+        <div class="category-name">
+          <p><%= category.name %></p>
+          <sub> <%= category.created_at.strftime("%d %B %Y") %> </sub>
+        </div>
+        <p class="amount"> <%= number_to_currency(category.deals.sum(:amount)) %> </p>
+      </li>
+    <% end %>
+  <% end %>
+  </ul>
+</div>
+<div class="create-category-link">
+  <%= link_to 'Add a new category', new_category_path %>
+</div>

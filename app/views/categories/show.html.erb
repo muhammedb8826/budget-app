@@ -1,0 +1,19 @@
+<div class="categories">
+  <span class="log-out"><%= link_to 'Logout', destroy_user_session_path, 'data-turbo-method': :delete, class: "logout" %></span>
+<h2><span class="go-back"><%= link_to '←', categories_path %></span> TRANSACTIONS</h2>
+<h3><span>Total amount:</span><span class="total-sum"> <%= number_to_currency(@category.deals.sum(:amount)) %></span></h3>
+<ul>
+  <% @category.recent_deals.each do |deal| %>
+    <li>
+      <div class="category-name">
+        <p> <%= deal.name %> </p>
+        <sub> <%= deal.created_at.strftime("%d %B %Y") %></sub>
+      </div>
+      <p class="amount"> <%= number_to_currency(deal.amount) %> </p>
+    </li>
+  <% end %>
+</ul>
+</div>
+<div class="create-category-link">
+  <%= link_to 'Add a new transaction',  new_category_deal_path(category_id: @category.id) %>
+</div>
